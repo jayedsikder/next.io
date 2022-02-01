@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="lo7gT68dvrujbgfdj-V86yr24wyITPAihMbOmPg_Mos" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="shortcut icon" href="https://yevgenysim.github.io/touche/assets/favicon/favicon.ico">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="st.css">
+    <link rel="stylesheet" href="st1.css">
+    <link rel="stylesheet" href="st2.css">
+    <link rel="stylesheet" href="sl.css">
+    <title>Server among us</title>
+    <style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 2;
+}
+</style>
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+          <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+          </a>
+          <a href="#home" class="w3-bar-item w3-button">HOME</a>
+          <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+          <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+            <a href="https://accounts.google.com/ServiceLogin?service=wise&passive=true&continue=http%3A%2F%2Fdrive.google.com%2F%3Futm_source%3Den&utm_medium=button&utm_campaign=web&utm_content=gotodrive&usp=gtd&ltmpl=drive" target="_blank" class="w3-bar-item w3-button w3-hide-small"><i class="fab fa-google-drive"></i> GOOGLE DEIVE</a>
+          <a href="https://www.facebook.com/messages/t/4067569863335888" target="_blank" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+         
+            <a href="https://jayedsikder.github.io/amongus.github.io/" target="_blank" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                
+                <i class="fa fa-search"></i>  
+          </a>
+              
+         
+        </div>
+      
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+          <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+          <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="https://accounts.google.com/ServiceLogin?service=wise&passive=true&continue=http%3A%2F%2Fdrive.google.com%2F%3Futm_source%3Den&utm_medium=button&utm_campaign=web&utm_content=gotodrive&usp=gtd&ltmpl=drive" class="w3-bar-item w3-button w3-hide-small"><i class="fab fa-google-drive"></i> GOOGLE DEIVE</a>
+          <a href="https://www.facebook.com/messages/t/4067569863335888" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+          <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+      </div>
+      
+      <!-- First Parallax Image with Logo Text -->
+      <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+          <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Server <span class="w3-hide-small">Among</span> Us</span>
+        </div>
+      </div>
+
+
+      <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT US</h3>
+        <p class="w3-center"><em>We store our school works</em></p>
+       
+          <div class="container mt-3">
+          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo').style.display='block'">SHOW <b>10D</b> Class Rutine</button>
+          </div>
+      <div id="demo" style="display:none">
+      <div class="container mt-3">
+          <table class="table  table-hover">
+             
+           <thead>
+              <tr>
+                  <th><b>Day</b></th>
+                  <th><b>1st (11:00 - 11:40 am)</b></th>
+                  <th><b>2nd (11:45 - 12:25 pm)</b></th>
+                  <th><b>3rd (12:30 - 1:10 pm)</b></th>
+                  <th><b>4th (1:15 - 1:55 pm)</b></th>
+              </tr>
+            </thead>  
+            <thead>
+             <tbody>
+              <tr>
+                  <td>Sun</td>
+                  <td>H. Math- Tapan</td>
+                  <td>Eng-II- Sumon</td>
+                  <td>Beng-1 Shamim</td>
+                  <td>Phy- Shuken</td>
+              </tr>
+              
+               
+              <tr>
+                  <td>Mon</td>
+                  <td>Math- Nitai</td>
+                  <td>Bang-II- Sanjit Paul</td>
+                  <td>Eng-I- Ram Kumar</td>
+                  <td>H. Math- Tapan</td>
+              </tr>
+              
+              <tr>
+                  <td>Tues</td>
+                  <td>Bio- Ratan</td>
+                  <td>Chem- Dipak</td>
+                  <td>B.G.ST- Prasanta</td>
+                  <td>H. Math- Tapan</td>
+              </tr>
+             
+              <tr>
+                  <td>Wed</td>
+                  <td>Math- Nitai</td>
+                  <td>Eng-II- Sumon</td>
+                  <td>Beng-1 Shamim</td>
+                  <td>Phy- Shuken</td>
+              </tr>
+           
+              <tr>
+                  <td>Thurs</td>
+                  <td>Math- Nitai</td>
+                  <td>Chem- Dipak</td>
+                  <td>Eng-I- Ram Kumar</td>
+                  <td>R.M.St -Sobhan</td>
+              </tr>
+               </tbody>
+          </table>
+      </div>
+      </div>
+  
+      
+  
+      
+        <div class="w3-row">
+        <!--Docs -->
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <p><b><i class="fa fa-user w3-margin-right"></i>We are Gregoryan</b></p><br>
+               <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="My name is Jayed Sikder.">
+            <img src="logu.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="240" height="233">    
+              </div>
+              <script>
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                  return new bootstrap.Tooltip(tooltipTriggerEl)
+                })
+                </script>
+          </div>
+          <!--Docs -->         
+          
+          <div class="offcanvas offcanvas-start" id="demo01">
+            <div class="offcanvas-header">
+              <h1 class="offcanvas-title">Sunday all Class link's below</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+              
+              <a href="https://meet.google.com/gqc-ihsa-tvp" target="_blank"><button class="btn btn-secondary" type="button">H. Math- Tapan</button></a>
+              <b>1st (11:00 - 11:40 am) <h6><em>Google meet link</em></h6></b>
+              <hr>
+              <a href="https://us04web.zoom.us/j/3579960264#success" target="_blank"><button class="btn btn-secondary" type="button">Eng-II- Sumon</button></a>
+              <b>2nd (11:45 - 12:25 pm) <h6><em>Zoom link Pass: 7Msg8b </em></h6></b>
+              <hr>
+              <a href="https://meet.google.com/bwc-pdjz-yfp" target="_blank"><button class="btn btn-secondary" type="button">	Beng-1 Shamim</button></a>
+              <b>3rd (12:30 - 1:10 pm) <h6><em>Zoom link</em></h6> </b>
+              <hr>
+              <a href="https://us04web.zoom.us/j/7748857266#success" target="_blank"><button class="btn btn-secondary" type="button">Phy- Shuken</button></a>
+              <b>4th (1:15 - 1:55 pm) <h6><em>Zoom link Pass: 5B08Ea </em></h6></b>
+            </div>
+          </div>
+          
+          <div class="container-fluid mt-3">
+            <h3>10D Online Class</h3>
+            <p><b><em>Click the buttons to  show all schedules of online class's.</em></b>This is for class 10D. Only give the Zoom and Google Meet's Link.</p>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo01">
+              Sunday Class's
+            </button>
+          </div>
+
+
+            <div class="offcanvas offcanvas-start" id="demo1">
+              <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Monday all Class link's below</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body">
+                
+                <a href="https://us05web.zoom.us/j/6269269695#success" target="_blank"><button class="btn btn-secondary" type="button">Math- Nitai</button></a>
+                <b>1st (11:00 - 11:40 am) <h6><em>Zoom link Pass: 4rBCc1</em></h6> </b>
+                <hr>
+                <a href="https://meet.google.com/ybi-ugem-pxr" target="_blank"><button class="btn btn-secondary" type="button">Bang-II- Sanjit Paul</button></a>
+                <b>2nd (11:45 - 12:25 pm) <h6><em>Google Meet link</em></h6> </b>
+                <hr>
+                <a href="https://meet.google.com/sea-vnth-day" target="_blank"><button class="btn btn-secondary" type="button">Eng-I- Ram Kumar</button></a>
+                <b>3rd (12:30 - 1:10 pm) <h6><em>Google meet link</em></h6> </b>
+                <hr>
+                <a href="https://meet.google.com/gqc-ihsa-tvp" target="_blank"><button class="btn btn-secondary" type="button">H. Math- Tapan</button></a>
+                <b>4th (1:15 - 1:55 pm) <h6><em>Google Meet link</em></h6> </b>
+              </div>
+            </div>
+            
+            <div class="container-fluid mt-3">
+              
+              <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">
+              Monday Class's
+              </button>
+            </div>
+            
+          
+          
+              <div class="offcanvas offcanvas-start" id="demo2">
+                <div class="offcanvas-header">
+                  <h1 class="offcanvas-title">Tuesday all Class link's below</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                  
+                  <a href="https://meet.google.com/yem-cqpk-cjg" target="_blank"><button class="btn btn-secondary" type="button">Bio- Ratan</button> </a>
+                  <b>1st (11:00 - 11:40 am) <h6><em>Google Meet link</em></h6> </b>
+                  <hr>
+                  <a href="https://meet.google.com/zto-fjfv-ouu" target="_blank"><button class="btn btn-secondary" type="button">Chem- Dipak</button> </a>
+                  <b>2nd (11:45 - 12:25 pm) <h6><em>Google Meet link</em></h6> </b>
+                  <hr>
+                  <a href="https://meet.google.com/bgg-xkiy-jyq" target="_blank"><button class="btn btn-secondary" type="button">B.G.ST- Prasanta</button></a>
+                  <b>3rd (12:30 - 1:10 pm) <h6><em>Google Meet link</em></h6> </b>
+                  <hr>
+                  <a href="https://meet.google.com/ybi-ugem-pxr" target="_blank"><button class="btn btn-secondary" type="button">H. Math- Tapan</button></a>
+                  <b>4th (1:15 - 1:55 pm) <h6><em>Google Meet link</em></h6> </b>
+                </div>
+              </div>
+              
+              <div class="container-fluid mt-3">
+                
+                <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
+                Tuesday Class's
+                </button>
+              </div>
+              
+            
+          
+                <div class="offcanvas offcanvas-start" id="demo3">
+                  <div class="offcanvas-header">
+                    <h1 class="offcanvas-title">Wednessday all Class link's below</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    
+                    <a href="https://us05web.zoom.us/j/6269269695#success" target="_blank"><button class="btn btn-secondary" type="button">Math- Nitai</button></a>
+                    <b>1st (11:00 - 11:40 am) <h6><em>Zoom link Pass: 4rBCc1 </em></h6> </b>
+                    <hr>
+                    <a href="https://us04web.zoom.us/j/3579960264#success" target="_blank"><button class="btn btn-secondary" type="button">Eng-II- Sumon</button></a>
+                    <b>2nd (11:45 - 12:25 pm) <h6><em>Zoom link   Pass: 7Msg8b </em></h6> </b>
+                    <hr>
+                    <a href="https://meet.google.com/bwc-pdjz-yfp" target="_blank"><button class="btn btn-secondary" type="button">Beng-1 Shamim</button></a>
+                    <b>3rd (12:30 - 1:10 pm) <h6><em>Google meet link</em></h6> </b>
+                    <hr>
+                    <a href="https://us04web.zoom.us/j/7748857266#success" target="_blank"><button class="btn btn-secondary" type="button">Phy- Shuken</button></a>
+                    <b>4th (1:15 - 1:55 pm) <h6><em>Zoom link Pass: 5B08Ea </em></h6> </b>
+                  </div>
+                </div>
+                
+                <div class="container-fluid mt-3">
+                  
+                  <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo3">
+                  Wednessday Class's
+                  </button>
+                </div>
+                
+          
+          
+                  <div class="offcanvas offcanvas-start" id="demo4">
+                    <div class="offcanvas-header">
+                      <h1 class="offcanvas-title">Thursday all Class link's below</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      
+                      <a href="https://us05web.zoom.us/j/6269269695#success" target="_blank"><button class="btn btn-secondary" type="button">Math- Nitai</button></a>
+                      <b>1st (11:00 - 11:40 am) <h6><em>Zoom link</em></h6> </b>
+                      <hr>
+                      <a href="https://meet.google.com/zto-fjfv-ouu" target="_blank"><button class="btn btn-secondary" type="button">	Chem- Dipak</button></a>
+                      <b>2nd (11:45 - 12:25 pm) <h6><em>Google Meet link</em></h6> </b>
+                      <hr>
+                      <a href="https://meet.google.com/sea-vnth-day" target="_blank"><button class="btn btn-secondary" type="button">Eng-I- Ram Kumar</button></a>
+                      <b>3rd (12:30 - 1:10 pm) <h6><em>Google Meet link</em></h6> </b>
+                      <hr>
+                      <a href="http://meet.google.com/azp-scmi-mos" target="_blank"><button class="btn btn-secondary" type="button">R.M.St -Sobhan</button></a>
+                      <b>4th (1:15 - 1:55 pm) <h6><em>Google Meet link</em></h6> </b>
+                    </div>
+                  </div>
+                  
+                  <div class="container-fluid mt-3">
+                    
+                    <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo4">
+                   Thursday Class's
+                    </button>
+                  </div>
+       
+        <p class="w3-large w3-center w3-padding-16">We are really good at:</p>
+        <p class="w3-wide"><i class="fa fa-camera"></i>Web development</p>
+        
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">40%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+        
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">75%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+        
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">50%</div>
+        </div>
+      </div>
+      
+      <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">3+</span><br>
+            Members
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">2+</span><br>
+            Projects Done
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">2+</span><br>
+            Data Entry Members
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">20+</span><br>
+            Meetings
+          </div>
+        
+      </div>
+      
+      <!-- Second Parallax Image with Portfolio Text -->
+    
+      <!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">Our WORKS</h3>
+    <p class="w3-center"><em>Here are our C.W, H.W & Other works.<br> Click on the images to make them bigger</em></p><br>
+    <body class="w3-light-grey">
+
+      <!-- w3-content defines a container for fixed size centered content, 
+      and is wrapped around the whole page content, except for the footer in this example -->
+      <div class="w3-content" style="max-width:1400px">
+      
+      <!-- Header -->
+      
+      
+      <!-- Grid -->
+      <div class="w3-row">
+      
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="cw.jpg" alt="Nature" style="width:100%" >
+          <div class="w3-container">
+            <h3><b>9D</b></h3>
+            <h5>Title description, <span class="w3-opacity">September 6, 2014</span></h5>
+          </div>
+      
+          <div class="w3-container">
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+              tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p>
+                  
+
+
+                    <div class="dropdown">
+    
+                      <button class="dropbtn"><b> &nbsp; C.W &nbsp;»&nbsp;  </b></button>
+                      <div class="dropdown-content">
+                      <a href="#">Bangla 1</a>
+                      <a href="#">Bangla 2</a>
+                      <a href="#">English 1</a>
+                      </div>
+                    
+                    </div>
+
+                    
+
+                  </p>
+              </div>
+              <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+        <img src="hw.jpg" alt="Norway" style="width:100%">
+          <div class="w3-container">
+            <h3><b>BLOG ENTRY</b></h3>
+            <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+          </div>
+      
+          <div class="w3-container">
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+              tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p>
+
+                  <div class="dropdown">
+    
+                    <button class="dropbtn"><b> &nbsp; H.W &nbsp;»&nbsp;  </b></button>
+                    <div class="dropdown-content">
+                    <a href="#">Bangla 1</a>
+                    <a href="#">Bangla 2</a>
+                    <a href="#">English 1</a>
+                    </div>
+                  
+                  </div>
+
+               </p>
+              </div>
+              <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- END BLOG ENTRIES -->
+      </div>
+      
+      <!-- Introduction menu -->
+      <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-card w3-margin w3-margin-top">
+        <img src="/w3images/avatar_g.jpg" style="width:100%">
+          <div class="w3-container w3-white">
+            <h4><b>Our Servises</b></h4>
+            <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+          </div>
+        </div><hr>
+        
+        <!-- Posts -->
+        <div class="w3-card w3-margin">
+          <div class="w3-container w3-padding">
+            <h4>The Developers</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Jayed Sikder</span><br>
+              <span>Web developer, Web Design & Data Entry</span>
+            </li>
+            <li class="w3-padding-16">
+                <div class=""tooltip>
+              <span class="tooltiptext"><img src="https://scontent.fdac80-1.fna.fbcdn.net/v/t39.30808-6/255372891_374114807833069_1030437032148486995_n.jpg?_nc_cat=111&_nc_rgb565=1&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=b4nu4TIPa7wAX__O5wc&_nc_ht=scontent.fdac80-1.fna&oh=3b70fd3879204cd8ac4289d209f94040&oe=61B278D5" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                  <a href="https://www.facebook.com/profile.php?id=100057036592888" target="_blank">My Profile.</a></span>
+                </div>
+              <span class="w3-large">Touhidul Islam</span><br>
+              <span>Data Entry</span>
+            </li> 
+            <li class="w3-padding-16">
+              <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t1.15752-9/241486475_1307090836375434_8917492275403109401_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_ohc=XImygIWW5NEAX9-EKUZ&_nc_ht=scontent.fdac5-2.fna&oh=ac2ced88c91c2be666c31184752c023e&oe=615C20BA" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Sheikh Adnan Haque Mahin</span><br>
+              <span>Data Entry</span>
+            </li>   
+            <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+              <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Nabil Shad Munim</span><br>
+              <span>Photoshop & Data Entry</span>
+            </li>  
+          </ul>
+        </div>
+        <hr> 
+      
+        
+      <!-- END Introduction Menu -->
+      </div>
+      
+      <!-- END GRID -->
+      </div><br>
+      
+      <!-- END w3-content -->
+      </div>
+      
+      <!-- Footer -->
+      <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+        <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+        <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+      </footer>
+      
+      </body>
+  
+  </div>
+  <!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by <a href="#" title="Jayed Sikder" target="_blank" class="w3-hover-text-green">Jayed Sikder</a></p>
+  </footer>
+   
+  <script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>
+  
+      
+
+</body>
+</html>
